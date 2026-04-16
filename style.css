@@ -8,36 +8,35 @@ body {
   height: 100vh;
 }
 
-/* CAKE RESPONSIVE */
+/* SVG CAKE */
 #cake {
-  width: 90vw;
-  max-width: 400px;
-  height: auto;
+  width: 300px;
+  max-width: 90vw;
   display: block;
   margin: 0 auto;
 }
 
-/* CANDLE FIX */
+/* CANDLE */
 .candle {
-  background: #fff;
-  border-radius: 10px;
   position: absolute;
-  top: 35%;
+  top: 260px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
   height: 70px;
+  background: white;
+  border-radius: 10px;
 }
 
 /* FIRE */
 .fire {
-  border-radius: 100%;
   position: absolute;
   top: -20px;
   left: 50%;
   margin-left: -3px;
   width: 7px;
   height: 18px;
+  border-radius: 50%;
   background: orange;
   animation: fire 1s infinite;
 }
@@ -50,7 +49,6 @@ body {
 /* TEXT */
 .text {
   margin-top: 20px;
-  text-align: center;
 }
 
 .text h1 {
@@ -59,7 +57,7 @@ body {
   border-right: 3px solid red;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 2s steps(30, end), blink .7s infinite;
+  animation: typing 2s steps(30), blink .7s infinite;
 }
 
 @keyframes typing {
