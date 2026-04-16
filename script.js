@@ -57,30 +57,4 @@ $(document).ready(function() {
   
   // ULANG CONFETTI
   setInterval(createConfetti, 8000);
-});            background: ${colors[Math.floor(Math.random() * colors.length)]};
-            top: -20px;
-            left: ${Math.random() * 100}vw;
-            border-radius: 50%;
-            opacity: ${Math.random()};
-            transform: translateY(0) rotate(${Math.random() * 360}deg);
-            animation: confettiFall ${Math.random() * 3 + 3}s linear ${delay}s infinite;
-        `;
-        container.appendChild(dot);
-    }
-
-    // Add CSS for the fall animation dynamically
-    const style = document.createElement('style');
-    style.innerHTML = `
-        @keyframes confettiFall {
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(110vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-}
+});
