@@ -1,69 +1,82 @@
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: #ffc0cb;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Arial;
+  height: 100vh;
 }
 
-/* tombol musik */
-.music-control {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+/* CAKE RESPONSIVE */
+#cake {
+  width: 90vw;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.music-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-/* kue simple */
-.cake {
-  width: 120px;
-  height: 80px;
-  background: pink;
-  border-radius: 10px;
-  position: relative;
-}
-
-/* lilin */
+/* CANDLE FIX */
 .candle {
-  width: 10px;
-  height: 40px;
-  background: #f4e4bc;
+  background: #fff;
+  border-radius: 10px;
   position: absolute;
-  top: -40px;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
-}
-
-/* api */
-.flame {
   width: 10px;
-  height: 15px;
-  background: orange;
-  border-radius: 50%;
+  height: 70px;
+}
+
+/* FIRE */
+.fire {
+  border-radius: 100%;
   position: absolute;
-  top: -10px;
-  animation: flicker 0.2s infinite alternate;
+  top: -20px;
+  left: 50%;
+  margin-left: -3px;
+  width: 7px;
+  height: 18px;
+  background: orange;
+  animation: fire 1s infinite;
 }
 
-@keyframes flicker {
-  from { transform: scale(1); }
-  to { transform: scale(1.2); }
+@keyframes fire {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.3); opacity: 0.6; }
 }
 
-/* teks */
-.typewriter {
-  color: white;
-  font-size: 32px;
-  margin-top: 30px;
+/* TEXT */
+.text {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 28px;
+  color: red;
+  border-right: 3px solid red;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(30, end), blink .7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* CONFETTI */
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
