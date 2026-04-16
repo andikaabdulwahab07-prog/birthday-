@@ -1,9 +1,9 @@
 // CONFETTI
 window.addEventListener('load', () => {
-  setTimeout(startConfetti, 4000);
+  setTimeout(startConfetti, 5000);
 });
 
-// AUTOPLAY TRICK (butuh klik sekali)
+// AUTOPLAY (butuh tap sekali)
 document.addEventListener("click", () => {
   const music = document.getElementById("bgm");
   music.play();
@@ -28,7 +28,6 @@ function startConfetti() {
   }
 }
 
-// animasi
 const style = document.createElement("style");
 style.innerHTML = `
 @keyframes fall {
