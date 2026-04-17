@@ -178,3 +178,7 @@ body {
     0% { transform: translateY(0) rotate(0deg); }
     100% { transform: translateY(110vh) rotate(360deg); }
 }
+
+{
+  #music-toggle {position:fixed; top:20px; right:20px; width:48px; height:48px; border-radius:50%; background:rgba(255,255,255,0.9); border:none; cursor:pointer; z-index:50; font-size:20px; display:flex; align-items:center; justify-content:center;}
+}
