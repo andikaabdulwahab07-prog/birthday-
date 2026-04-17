@@ -1,184 +1,135 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic);
-html,
-body {
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+html, body {
   width: 100%;
   height: 100%;
-}
-#confetti{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:3;
-}
-#confetti-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fecfef, #fad0c4);
+  overflow-x: hidden;
 }
 
-@keyframes fall {
-  to { transform: translateY(110vh); }
-}
-
-
-
-body {
-  background: #ffc0cb;
-}
-
+/* CAKE */
 #cake {
   display: block;
+  width: 300px;
+  max-width: 90vw;
+  margin: -5em auto 0 auto;
   position: relative;
-  margin: -10em auto 0 auto;
+  z-index: 2;
 }
 
+/* CANDLE */
 .candle {
-  background: #ffffff;
+  background: #fff;
   border-radius: 10px;
   position: absolute;
   top: 228px;
   left: 50%;
   margin-left: -5px;
-  margin-top: -8.33333333px;
   width: 10px;
   height: 70px;
   transform: translateY(-300px);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-animation: in 500ms 6s ease-out forwards;
-          animation: in 500ms 6s ease-out forwards;
+  animation: in 500ms 6s ease-out forwards;
+  z-index: 3;
 }
 
-.candle:after,
-.candle:before {
-  background: rgba(255, 0, 0, 0.4);
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2.22222222px;
+@keyframes in {
+  to { transform: translateY(0); }
 }
 
-.candle:after {
-  top: 15%;
-  left: 0;
-}
-
-.candle:before {
-  top: 45%;
-  left: 0;
-}
-
+/* FIRE */
 .fire {
   border-radius: 100%;
   position: absolute;
   top: -20px;
   left: 50%;
-  margin-left: -2.6px;
-  width: 6.66666667px;
+  margin-left: -3px;
+  width: 7px;
   height: 18px;
 }
 
-.fire:nth-child(1) {
-  -webkit-animation: fire 2s 6.5s infinite;
-          animation: fire 2s 6.5s infinite;
-}
+.fire:nth-child(1){animation: fire 2s 6.5s infinite;}
+.fire:nth-child(2){animation: fire 1.5s 6.5s infinite;}
+.fire:nth-child(3){animation: fire 1s 6.5s infinite;}
+.fire:nth-child(4){animation: fire 0.5s 6.5s infinite;}
+.fire:nth-child(5){animation: fire 0.2s 6.5s infinite;}
 
-.fire:nth-child(2) {
-  -webkit-animation: fire 1.5s 6.5s infinite;
-          animation: fire 1.5s 6.5s infinite;
-}
-
-.fire:nth-child(3) {
-  -webkit-animation: fire 1s 6.5s infinite;
-          animation: fire 1s 6.5s infinite;
-}
-
-.fire:nth-child(4) {
-  -webkit-animation: fire 0.5s 6.5s infinite;
-          animation: fire 0.5s 6.5s infinite;
-}
-
-.fire:nth-child(5) {
-  -webkit-animation: fire 0.2s 6.5s infinite;
-          animation: fire 0.2s 6.5s infinite;
-}
-
-@-webkit-keyframes fire {
-  0%, 100% {
-    background: rgba(254, 248, 97, 0.5);
-    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    background: rgba(255, 50, 0, 0.1);
-    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
-    transform: translateY(-20px) scale(0);
-  }
-}
 @keyframes fire {
-  0%, 100% {
-    background: rgba(254, 248, 97, 0.5);
-    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  0%,100% {
+    background: rgba(254,248,97,0.5);
     transform: translateY(0) scale(1);
   }
   50% {
-    background: rgba(255, 50, 0, 0.1);
-    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    background: rgba(255,50,0,0.1);
     transform: translateY(-20px) scale(0);
   }
 }
-@-webkit-keyframes in {
-  to {
-    transform: translateY(0);
-  }
-}
-@keyframes in {
-  to {
-    transform: translateY(0);
-  }
-}
+
+/* TEXT */
 .text {
-  margin-top: 25px;           /* space below cake */
+  margin-top: 20px;
   text-align: center;
+  z-index: 5;
 }
 
 .text h1 {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 3rem;            /* 🔥 CHANGE SIZE HERE */
-  color: red;
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(26px, 5vw, 40px);
+  color: #c2185b;
+  background: rgba(255,255,255,0.9);
+  padding: 12px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid red;
+  border-right: 3px solid #c2185b;
   display: inline-block;
 }
 
 .typewriter {
-  animation:
-    typing 2s steps(30, end) forwards,
-    blink .7s infinite;
+  animation: typing 2s steps(30,end) forwards, blink .7s infinite;
 }
 
-/* Typing effect */
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from { width: 0 }
+  to { width: 100% }
 }
 
-/* Cursor blink */
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% { border-color: transparent }
 }
 
-
-@keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(110vh) rotate(360deg); }
+/* MUSIC BUTTON */
+#music-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-{
-  #music-toggle {position:fixed; top:20px; right:20px; width:48px; height:48px; border-radius:50%; background:rgba(255,255,255,0.9); border:none; cursor:pointer; z-index:50; font-size:20px; display:flex; align-items:center; justify-content:center;}
+/* CONFETTI CONTAINER */
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
