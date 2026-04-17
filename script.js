@@ -61,3 +61,8 @@ function startConfetti() {
     `;
     document.head.appendChild(style);
 }
+ window.addEventListener("load", () => {
+  const music = document.getElementById("birthdayMusic");
+  music.muted = false;
+  music.play().catch(() => {});
+});
