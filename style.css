@@ -150,18 +150,10 @@ body {
   color: #c0392b;
   line-height: 1.5;
 }
-
-/* Typing effect */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+.text {
+  position: relative;
+  z-index: 10000;
 }
-
-/* Cursor blink */
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
 
 @keyframes fall {
     0% { transform: translateY(0) rotate(0deg); }
