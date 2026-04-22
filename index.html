@@ -11,18 +11,21 @@
 <body>
     <div id="confetti-container"></div>
 
-   <audio id="lagu" autoplay loop>
+   <audio id="lagu" loop>
   <source src="birthday-song.mp3" type="audio/mpeg">
 </audio>
 
 <script>
   const audio = document.getElementById("lagu");
 
+  audio.currentTime = 20;
+
   audio.play().catch(() => {
-    console.log("autoplay ke-block ");
+    console.log("kena block ");
   });
 
   document.body.addEventListener("click", () => {
+    audio.currentTime = 20;
     audio.play();
   });
 </script>
