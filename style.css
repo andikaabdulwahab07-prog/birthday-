@@ -146,7 +146,7 @@ body {
   text-align: center;
 }
 
-.text h1 {
+.text p {
   font-family: 'Brush Script MT', cursive;
   font-size: 3rem;            /* 🔥 CHANGE SIZE HERE */
   color: red;
@@ -158,7 +158,7 @@ body {
 
 .typewriter {
   animation:
-    typing 2s steps(30, end) forwards,
+    typing 4s steps(120, end) forwards,
     blink .7s infinite;
 }
 
