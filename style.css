@@ -146,9 +146,9 @@ body {
   text-align: center;
 }
 
-.text h1 {
+.text p {
   font-family: 'Brush Script MT', cursive;
-  font-size: 3rem;            /* 🔥 CHANGE SIZE HERE */
+  font-size: 7rem;            /* 🔥 CHANGE SIZE HERE */
   color: red;
   white-space: nowrap;
   overflow: hidden;
