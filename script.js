@@ -24,19 +24,7 @@ function startConfetti() {
     document.body.appendChild(container);
 
     const colors = ['#f2d74e', '#95c3de', '#ff9a91', '#a4ffc4', '#ffffff'];
-  
-    // Typewriter effect
-  const fullText = "my dearest love, i don’t think words will ever be enough to explain how much you truly mean to me. on your birthday, i just want you to know how grateful i am to have you in my life. you bring a kind of warmth and calm that i didn’t even realize i needed before i met you. everything just feels better with you around. i’m really proud of you of the person you are. your independence, the way you work so hard, how simple and genuine you are, and how incredibly patient you’ve always been with me. it’s something i admire more than you probably realize. i adore your kindness, your maturity, and the way you always understand me, even when i’m being a little childish. i’m sorry if i annoy you sometimes, it’s just my way of showing how much i care about you. i miss you more than i can put into words, and i really hope we can meet soon. i can’t wait for the day i get to hold you close and spend real and many moments with you. i love you, always. happy birthday, sayang.";
-  let index = 0;
-  function typeWriter(){
-    if(index<fullText.length){
-      loveText.textContent+=fullText.charAt(index);
-      index++;
-      setTimeout(typeWriter,50);
-    }
-  }
-  setTimeout(typeWriter,500);
-    
+
     // Create hundreds of confetti dots
     for (let i = 0; i < 200; i++) {
         const dot = document.createElement('div');
