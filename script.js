@@ -24,7 +24,19 @@ function startConfetti() {
     document.body.appendChild(container);
 
     const colors = ['#f2d74e', '#95c3de', '#ff9a91', '#a4ffc4', '#ffffff'];
-
+  
+    // Typewriter effect
+  const fullText = "";
+  let index = 0;
+  function typeWriter(){
+    if(index<fullText.length){
+      loveText.textContent+=fullText.charAt(index);
+      index++;
+      setTimeout(typeWriter,50);
+    }
+  }
+  setTimeout(typeWriter,500);
+    
     // Create hundreds of confetti dots
     for (let i = 0; i < 200; i++) {
         const dot = document.createElement('div');
