@@ -142,13 +142,25 @@ body {
   }
 }
 .text {
-  margin-top: 25px;           /* space below cake */
+  max-width: 320px;
+  margin: 20px auto;
   text-align: center;
+}
+
+.text {
+  max-width: 320px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.typewriter {
+  white-space: normal; /* ini penting banget, jangan sok nowrap lagi */
+  word-wrap: break-word;
 }
 
 .text p {
   font-family: 'Brush Script MT', cursive;
-  font-size: 5rem;            /* 🔥 CHANGE SIZE HERE */
+  font-size: 3rem;            /* 🔥 CHANGE SIZE HERE */
   color: red;
   white-space: nowrap;
   overflow: hidden;
@@ -158,7 +170,7 @@ body {
 
 .typewriter {
   animation:
-    typing 3s steps(60, end) forwards,
+    typing 5s steps(120, end) forwards,
     blink .7s infinite;
 }
 
