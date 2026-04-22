@@ -141,19 +141,38 @@ body {
     transform: translateY(0);
   }
 }
-
 .text {
-  max-width: 320px;
-  margin: 20px auto;
+  margin-top: 25px;           /* space below cake */
   text-align: center;
-  font-family: cursive;
-  color: #c0392b;
-  line-height: 1.5;
 }
-.text {
-  position: relative;
-  z-index: 10000;
+
+.text h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3rem;            /* 🔥 CHANGE SIZE HERE */
+  color: red;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid red;
+  display: inline-block;
 }
+
+.typewriter {
+  animation:
+    typing 2s steps(30, end) forwards,
+    blink .7s infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Cursor blink */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
 
 @keyframes fall {
     0% { transform: translateY(0) rotate(0deg); }
