@@ -141,37 +141,14 @@ body {
     transform: translateY(0);
   }
 }
-.text {
-  max-width: 320px;
-  margin: 20px auto;
-  text-align: center;
-}
 
 .text {
   max-width: 320px;
   margin: 20px auto;
   text-align: center;
-}
-
-.typewriter {
-  white-space: normal; /* ini penting banget, jangan sok nowrap lagi */
-  word-wrap: break-word;
-}
-
-.text p {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 3rem;            /* 🔥 CHANGE SIZE HERE */
-  color: red;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid red;
-  display: inline-block;
-}
-
-.typewriter {
-  animation:
-    typing 5s steps(120, end) forwards,
-    blink .7s infinite;
+  font-family: cursive;
+  color: #c0392b;
+  line-height: 1.5;
 }
 
 /* Typing effect */
