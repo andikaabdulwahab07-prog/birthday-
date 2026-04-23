@@ -142,15 +142,16 @@ body {
   }
 }
 .text {
-  margin-top: 25px;           /* space below cake */
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .text p {
   font-family: 'Brush Script MT', cursive;
   font-size: 3rem;
   color: red;
-  white-space: normal;        /* INI YANG BIKIN TURUN KE BAWAH */
+  white-space: normal;        
   word-wrap: break-word;
   max-width: 320px;
   text-align: center;
