@@ -148,12 +148,13 @@ body {
 
 .text p {
   font-family: 'Brush Script MT', cursive;
-  font-size: 3rem;            /* 🔥 CHANGE SIZE HERE */
+  font-size: 3rem;
   color: red;
-  white-space: nowrap;
-  overflow: hidden;
+  white-space: normal;        /* INI YANG BIKIN TURUN KE BAWAH */
+  word-wrap: break-word;
+  max-width: 320px;
+  text-align: center;
   border-right: 3px solid red;
-  display: inline-block;
 }
 
 .typewriter {
