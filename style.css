@@ -159,10 +159,10 @@ body {
 }
 
 .typewriter {
-  animation:
-    typing 4s steps(120, end) forwards,
-    blink .7s infinite;
+  animation: none;
+  border-right: none;
 }
+
 
 /* Typing effect */
 @keyframes typing {
