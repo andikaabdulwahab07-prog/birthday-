@@ -163,20 +163,3 @@ body {
   border-right: none;
 }
 
-
-/* Typing effect */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* Cursor blink */
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-
-@keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(110vh) rotate(360deg); }
-}
